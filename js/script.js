@@ -47,14 +47,24 @@ makeActive(navLinks);
 makeActive(searchTabs);
 
 var likes = document.querySelectorAll(".like");
-console.log(likes.length)
-    likes.forEach(like => like.addEventListener('click', () => {
-        if (like.src.match("./img/heart-fill.png")) {
-            like.src = './img/heart-coloured.png';
-        } else {
-            like.src = './img/heart-fill.png';
-        }
-    }))
+
+likes.forEach(like => like.addEventListener('click', () => {
+    if (like.src.match("./img/heart-fill.png")) {
+        like.src = './img/heart-coloured.png';
+    } else {
+        like.src = './img/heart-fill.png';
+    }
+}))
+
+// function imgChanger(imagesList, source1, source2) {
+//     imagesList.forEach(img => img.addEventListener('click', () => {
+//         if (img.src.match(source1)) {
+//             img.src = `${source2}`;
+//         } else {
+//             img.src = `${source1}`;
+//         }
+//     }))
+// }
 // imgChanger()
 
 // imgChanger(like);
