@@ -2,7 +2,7 @@
  * @author Dana Campbell
  * @email danacam28@gmail.com
  * @create date 2022-01-18 08:30:40
- * @modify date 2022-01-25 15:17:31
+ * @modify date 2022-01-25 15:31:00
  * @desc [description]
  */
 
@@ -420,7 +420,8 @@ nav a.active {
 
 /*** Hero Content ***/
 .hero__content {
-	height: 50vh;
+	/* height: 50vh; */
+	height: 330px;
 	transition: padding 0.4s ease-in-out;
 	background-image: linear-gradient(120deg, rgba(0,0,0,0.65) 55%, rgba(0,0,0,0) 75%),
 	url('../img/r6.jpg');
@@ -446,12 +447,13 @@ nav a.active {
 .hero__content p {
 	color: var(--white);
 	font-size: 0.9375rem;
+	margin-top: 1em;
 	width: 50ch;
 }
 
 /*** Hero Search ***/
 .hero__search {
-	margin-top: -100px;
+	margin-top: -90px;
 	margin-left: 5em;
 	width: 75%; height: auto;
 	
@@ -1347,11 +1349,8 @@ footer > * {
 	.hero__content {
 		background-image: linear-gradient(rgba(0,0,0,0.55) , rgba(0,0,0,0.7)),
 		url('../img/r6.jpg');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
 		padding: 4em 1em 2em 1em;
-		height: 55vh;
+		/* height: 400px; */
 	}
 
 	.hero__content h1 {
