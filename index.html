@@ -23,6 +23,8 @@
 </head>
 
 <body>
+
+    <div class="overlay"></div>
     <!-- TOP BAR -->
     <div class="top-bar">
         <span>Welcome to True Home Real Estate Services</span>
@@ -44,7 +46,7 @@
     <header>
         <!-- Header Top -->
         <div class="header__top">
-            <a class="header__top-logo" href="#">
+            <a class="site-logo" href="#">
                 <img src="./img/logo2.png" alt="">
                 <span>True Homes</span>
             </a>
@@ -85,19 +87,27 @@
         </div>
         <!-- Header Bottom -->
         <div class="header__bottom">
-            <img src="./img/menu.png" alt="" class="header__bottom-toggler">
+            <img src="./img/menu2.png" alt="" class="header__bottom-toggler">
             <nav>
                 <a href="#" class="active">Home</a>
                 <a href="#about">About Us</a>
-                <a href="#">Services</a>
-                <a href="#">Projects</a>
-                <a href="#">News</a>
-                <a href="#">Contact</a>
+                <a href="#services">Services</a>
+                <a href="#props">Properties</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
             </nav>
             <div>
-                <img src="./img/search.png" alt="">
+                <img src="./img/search.png" alt="" class="search-icon">
                 <img src="./img/cart.png" alt="">
             </div>
+            <form>
+                <div>
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">
+                        <img src="./img/search.png" alt="">
+                    </button>
+                </div>
+            </form>
         </div>
     </header>
     <!-- ./HEADER -->
@@ -111,7 +121,7 @@
         </div>
 
         <!-- Hero Search -->
-        <div class="hero__search" style="display: non;">
+        <div class="hero__search">
             <div class="hero__search-labels">
                 <p>All</p>
                 <p  class="active">For Sale</p>
@@ -150,7 +160,7 @@
             <!-- Section Title -->
             <div class="section-title">
                 <span>About Us</span>
-                <h2>Why Choose Us</h2>
+                <h2>Why Choose Us ?</h2>
             </div>
             <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque doloremque dolor quasi rerum, ab voluptas?</p>
@@ -182,7 +192,7 @@
                 </div>
                 <div class="">
                     <div>
-                        <img src="./img/high-five2.png" alt="">
+                        <img src="./img/high-five.png" alt="">
                     </div>
                     <div>
                         <span>Trusted Partners</span>
@@ -223,6 +233,8 @@
     </section>
     <!-- ./ABOUT SECTION -->
 
+
+
     <!-- SEARCH BY CITY SECTION -->
     <section class="search-city section">
         <!-- Section Title -->
@@ -258,12 +270,61 @@
     </section>
     <!-- SEARCH BY CITY SECTION -->
 
-    <!-- <section class="steps section">
+    <!-- SERVICES SECTION -->
+    <section class="services section" id="services">
+        <!-- Services Header -->
+        <div class="services__header">
+            <!-- Section Title -->
+            <div class="section-title">
+                <span>Our Services</span>
+                <h2>What We Offer</h2>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque doloremque dolor quasi rerum, ab voluptas?</p>
+                <button class="btn-fill-turquoise">
+                    <a href="#">View More</a>
+                </button>
+            </div>
+        </div>
+        <!-- Services Card -->
+        <div class="services__cards">
+            <!-- Card 1 -->
+            <div class="services__card">
+                <img src="./img/rental.png" alt="">
+                <span>Property Insurance</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat sunt vel deserunt enim a culpa ullam voluptatem accusantium facilis nemo numquam, debitis est minus quos nam dignissimos quasi id ducimus?</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="services__card">
+                <img src="./img/tax2.png" alt="">
+                <span>Tax Advancement</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptatibus.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="services__card">
+                <img src="./img/commission.png" alt="">
+                <span>Lowest Commission</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptatibus.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="services__card">
+                <img src="./img/high-five.png" alt="">
+                <span>Trusted Service</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptatibus.</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="services__card">
+                <img src="./img/fast2.png" alt="">
+                <span>Fast Service</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptatibus.</p>
+            </div>
+        </div>
+    </section>
+    <!-- ./SERVICES SECTION -->
 
-    </section> -->
 
     <!-- FEATURED PROPERTIES SECTION -->
-    <section class="featured section">
+    <section class="featured section" id="props">
         <!-- Section Title -->
         <div class="section-title">
             <span>Latest Properties</span>
@@ -273,7 +334,7 @@
         <!-- Featured Labels -->
         <ul class="featured__labels">
             <li class="active">All</li>
-            <li>Latest</li>
+            <li>Recently Added</li>
             <li>Most Viewed</li>
             <li>Most Likes</li>
         </ul>
@@ -568,7 +629,7 @@
     <!-- ./FEATURED PROPERTIES SECTION -->
 
     <!-- REVIEWS SECTION -->
-    <section class="reviews section">
+    <section class="reviews section" id="reviews">
         <!-- Section Title -->
         <div class="section-title">
             <span>Our Reviews</span>
@@ -581,7 +642,7 @@
                 <!-- Card 1 -->
                <div class="reviews__content-card">
                    <img src="./img/f1.jpg" alt="">
-                   <span>Jane Doe</span>
+                   <span>Alexander Hamilton</span>
                    <div>
                         <img src="./img/quote.png" alt="">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem officiis dolores voluptas repellendus quae quod!</p>
@@ -591,7 +652,7 @@
                <!-- Card 2 -->
                <div class="reviews__content-card">
                    <img src="./img/f4.jpg" alt="">
-                   <span>Jane Doe</span>
+                   <span>Angelica Schuyler</span>
                    <div>
                         <img src="./img/quote.png" alt="">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem officiis dolores voluptas repellendus quae quod!</p>
@@ -601,7 +662,7 @@
                <!-- Card 3 -->
                <div class="reviews__content-card">
                    <img src="./img/f2.jpg" alt="">
-                   <span>Jane Doe</span>
+                   <span>Peggy Schuyler</span>
                    <div>
                         <img src="./img/quote.png" alt="">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem officiis dolores voluptas repellendus quae quod!</p>
@@ -617,6 +678,56 @@
         </div>
     </section>
     <!-- ./REVIEWS SECTION -->
+
+    <!-- FOOTER -->
+    <footer style="display: none;">
+        <!-- Footer Top -->
+        <div class="footer__top">
+            <div>
+                <a class="site-logo" href="#">
+                    <img src="./img/logo2.png" alt="">
+                    <span>True Homes</span>
+                </a>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam rem, amet voluptates est beatae eveniet aperiam doloremque, veritatis obcaecati, quo dolorum reprehenderit maxime ut. Asperiores alias vel beatae. Fugit, iure.</p>
+                <div>
+                    <a href="#"><img src="./img/facebook.png" alt=""></a>
+                    <a href="#"><img src="./img/twitter.png" alt=""></a>
+                    <a href="#"><img src="./img/instagram.png" alt=""></a>
+                </div>
+            </div>
+            <div>
+                <span>Main Links</span>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
+            <div>
+                <span>Other Links</span>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <span>Contact Us</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, modi?</p>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer__bottom">
+            <span>Copyright 2022 Done by Dana Campbell</span>
+        </div>
+    </footer>
+    <!-- ./FOOTER -->
 
     
 
