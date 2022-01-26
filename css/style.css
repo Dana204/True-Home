@@ -2,8 +2,8 @@
  * @author Dana Campbell
  * @email danacam28@gmail.com
  * @create date 2022-01-18 08:30:40
- * @modify date 2022-01-25 15:39:48
- * @desc [description]
+ * @modify date 2022-01-26 09:33:19
+ * @desc [A simple single page website built for a real estate agency.]
  */
 
 
@@ -27,7 +27,6 @@
 	--charleston-green: #212529ff;
 	--source-serif-pro: 'Source Serif Pro', serif;
 	--shadow: 0px 0 30px rgba(0, 0, 0, 0.08);
-	/* --shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 	--box-shadow: 0 15px 30px  rgba(0,0,0,0.04);
 	--box-shadow2: -20px 20px 20px  rgba(0,0,0,0.02);
 }
@@ -57,21 +56,18 @@ li {
     list-style: none;
 }
 
-.box-shadow {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 .section {
 	padding: 3em 5em 4em 5em;
 	transition: padding 0.5s ease-in-out;
 }
 
+/*** Site Logo ***/
 .site-logo {
 	display: flex;
 	align-items: center;
 	gap: 0.5em;
 }
-
 
 .site-logo img {
 	height: 1.6rem;
@@ -150,6 +146,7 @@ li {
 	border: 1px solid var(--mountain-meadow);
 }
 
+/*** Overlay ***/
 .overlay {
 	position: fixed;
 	top: 0; left: -100%;
@@ -360,7 +357,6 @@ nav a.active {
 	padding: 1em;
 	background: var(--white);
 	box-shadow: var(--shadow);
-	/* border-radius: 20px; */
 	display: none;
 	transition: left 0.5s ease-in-out;
 }
@@ -377,7 +373,6 @@ nav a.active {
 	justify-content: space-between;
 	height: 100%;
 	border-radius: 20px;
-	/* padding */
 } 
 
 .header__bottom > form div input {
@@ -387,6 +382,7 @@ nav a.active {
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 	color: var(--slate-gray);
+	font-size: 0.9375rem;
 }
 
 .header__bottom > form div button {
@@ -450,7 +446,7 @@ nav a.active {
 
 /*** Hero Search ***/
 .hero__search {
-	margin-top: -5em;
+	margin-top: -6em;
 	margin-left: 5em;
 	width: 75%; height: auto;
 }
@@ -510,7 +506,6 @@ nav a.active {
 	font-size: 0.9375rem;
 	background-color: transparent;
 	border-radius: 5px;
-	
 }
 
 .hero__search form select {
@@ -690,13 +685,6 @@ nav a.active {
 */
 .search-city {
 	background: var(--charleston-green);
-	/* background-image: url('../img/Shiny_Overlay.svg'); */
-	/* background-image: linear-gradient(120deg, rgba(0,0,0,0.65) 55%, rgba(0,0,0,0) 75%),
-	url('../img/Shiny_Overlay.svg'); */
-	/* background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover; */
-	/* background: linear-gradient(180deg, var(--charleston-green) 50%,var(--white) 50%); */
 }
 
 .search-city .section-title h2 {
@@ -1133,110 +1121,141 @@ nav a.active {
 
 /*
  * ----------------------------------------
+ * CONTACT SECTION
+ * ----------------------------------------
+*/
+
+.contact {
+	background: linear-gradient(90deg, var(--cultured) 95%, var(--white) 5%);
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: 75% 100%;
+	transition: all 0.5s ease-in-out;
+}
+
+/*** Contact Content ***/
+.contact__content {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 1em;
+}
+
+
+/** Contact Content Left **/
+.contact__content-left {
+	flex: 1 1 60%;
+}
+
+.contact__content-left > p {
+	color: var(--slate-gray);
+	font-size: 0.9rem;
+}
+
+.contact__content-left > div > div {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 1.5em;
+}
+
+.contact__content-left > div > div img {
+	height: 1.2rem;
+}
+
+.contact__content-left > div > div a,
+.contact__content-left > div > div p,
+.contact__content-left > div > div address,
+.contact__content-left > div > div time {
+	font-size: 0.9rem;
+	color: var(--slate-gray);
+}
+
+.contact__content-left > div > div address {
+	font-style: normal;
+}
+
+/** Contact Content Right **/
+.contact__content-right {
+	flex: 1 1 40%;
+}
+
+.contact__content-right form {
+	padding: 2em 2em;
+	width: 100%;
+	background: var(--white);
+	box-shadow: var(--shadow);
+	border-radius: 20px;
+}
+
+.contact__content-right form span {
+	font-size: 1rem;
+	display: block;
+	text-align: center;
+	margin-bottom: 1em;
+	
+}
+.contact__content-right form input,
+.contact__content-right form textarea {
+	border: 1px solid var(--gainsboro);
+	outline: none;
+	font-size: 0.9375rem;
+	background-color: transparent;
+	border-radius: 5px;
+	margin-bottom: 1em;
+	padding-left: 0.5em;
+	width: 100%;
+}
+
+.contact__content-right form input::placeholder,
+.contact__content-right form textarea::placeholder,
+.contact__content-right form input ::-webkit-input-placeholder,
+.contact__content-right form textarea ::-webkit-input-placeholder,
+.contact__content-right form input::-moz-placeholder,
+.contact__content-right form textarea::-moz-placeholder {
+	color: var(--black);
+	opacity: 1;
+}
+
+.contact__content-right form input {
+	height: 2.8rem;
+}
+
+.contact__content-right form .btn-fill-teal {
+	font-size: 1rem;
+	height: 2.8rem;
+	display: block;
+	margin: 0 auto;
+	color: var(--white);
+	transition: width 0.5s ease-in-out;
+}
+
+
+/*
+ * ----------------------------------------
  * FOOTER
  * ----------------------------------------
 */
 
-/* footer {
+footer {
 	background: var(--charleston-green);
-} */
-
-footer > * {
-	display: flex;
-}
-
-/*** Footer Top ***/
-.footer__top {
-	flex-wrap: wrap;
-	/* background: var(--cultured); */
-	justify-content: space-between;
-	gap: 1.5rem;
-	flex-wrap: wrap;
-	padding: 2em 5em;
-	transition: all 0.5s ease-in-out;
-}
-
-/* .footer__top .site-logo span {
-	color: var(--white);
-} */
-
-.footer__top > div:first-child,
-.footer__top > div:last-child {
-	flex: 1 1 30%;
-	min-width: 280px;
-}
-
-.footer__top > div:first-child > div {
-	margin-top: 1em;
-}
-
-.footer__top > div:first-child > div a img {
-	height: 1.1rem;
-	transform: translateY(0px);
-	transition: transform 0.5s ease-in-out;
-}
-
-.footer__top > div:first-child > div a img:hover {
-	transform: translateY(-10px);
-}
-
-.footer__top > div:first-child > div a:not(:last-child) {
-	margin-right: 0.5em;
-}
-
-.footer__top > div:nth-child(2),
-.footer__top > div:nth-child(3) {
-	flex: 1 1 15%;
-	/* background: yellowgreen; */
-	min-width: 120px;
-}
-
-.footer__top > div > span {
-	color: var(--teal);
-	display: block;
-	margin-bottom: 1em;
-	font-size: 1rem;
-}
-
-.footer__top > div:nth-child(2) ul li ,
-.footer__top > div:nth-child(3) ul li {
-	transform: translateX(0px);
-	transition: transform 0.5s ease-in-out;
-}
-
-.footer__top > div:nth-child(2) ul li a,
-.footer__top > div:nth-child(3) ul li a {
-	color: var(--black);
-}
-
-.footer__top > div:nth-child(2) ul li:hover,
-.footer__top > div:nth-child(3) ul li:hover {
-	transform: translateX(10px);
-}
-
-.footer__top > div:nth-child(2) ul li:not(:last-child),
-.footer__top > div:nth-child(3) ul li:not(:last-child) {
-	margin-bottom: 0.5em;
-}
-
-.footer__top p {
-	font-size: 00.9375rem;
-	color: var(--slate-gray);
-	margin-top: 1em;
-}
-
-/*** Footer Bottom ***/
-.footer__bottom {
-	justify-content: center;
 	padding: 1em 5em;
-	/* border-top: 1px solid var(--slate-gray); */
-	background: var(--charleston-green);
-	transition: all 0.5s ease-in-out;
 }
 
-.footer__bottom span {
-	color: var(--slate-gray);
-	
+footer span {
+	display: flex;
+	align-items: center;
+}
+
+footer span img {
+	height: 0.8rem;
+}
+
+footer span {
+	color: var(--cadet-blue-crayola);
+	font-size: 0.9rem;
+	display: block;
+	text-align: center;
 }
 
 
@@ -1309,7 +1328,7 @@ footer > * {
 	
 	.header__top-contact {
 		flex: 1 1 30%;
-		min-width: 200px;
+		min-width: 12.5rem;
 	}
 	
 	/*** Header Bottom ***/
@@ -1413,23 +1432,43 @@ footer > * {
 		margin: 2em auto 0 auto;
 	}
 
-	
-
 	/***** FEATURED PROPERTIES SECTION *****/
 	/*** Featured Labels ***/
 	.featured__labels {
 		justify-content: center;
 	}
+	
+	
+	/***** CONTACT SECTION *****/
+	.contact {
+		background: var(--cultured-2);
+	}
+	/*** Contact Content ***/
+	.contact__content {
+		flex-direction: column;
+	}
 
-	/***** FOOTER *****/
-	/*** Footer Top ***/
-	.footer__top {
-		padding: 2em 1em;
+	.contact__content-left > p {
+		text-align: center;
 	}
 	
-	/*** Footer Bottom ***/
-	.footer__bottom {
-		padding: 1em;
+	/** Contact Content Left **/
+	.contact__content-left > div {
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(13rem, 1fr));
+		grid-column-gap: 2rem;
+		grid-row-gap: 1rem;
+	}
+
+	/** Contact Content Right **/
+	.contact__content-right form {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	/***** FOOTER *****/
+	footer {
+		padding: 0.5em 1em;
 	}
 }
 
@@ -1498,7 +1537,6 @@ footer > * {
 	
 }
 
-
 /* 500px */
 @media (max-width: 31.25em) {
 	/***** ABOUT SECTION *****/
@@ -1507,6 +1545,14 @@ footer > * {
 	.about__row-left > div:nth-child(3){
 		box-shadow: none;
 	}	
+
+	/***** CONTACT SECTION *****/
+	/** Contact Content Right **/
+	.contact__content-right form,
+	.contact__content-right form .btn-fill-teal {
+		width: 100%;
+	}
+
 }
 
 

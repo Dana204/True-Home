@@ -17,8 +17,6 @@ searchIcon.addEventListener("click", displayHeaderForm)
 
 
 var sticky = navbar.offsetTop;
-console.log(sticky)
-// var sticky = 200;
 
 function scrollNav() {
   if (window.pageYOffset >= sticky) {
@@ -32,8 +30,6 @@ window.onscroll = function() {
     removeHeaderForm()
     scrollNav()
 };
-
-
 
 
 function displayHeaderForm() {
@@ -58,15 +54,6 @@ function closeMenu() {
     overlay.classList.remove("active");
 }
 
-// for (let i = 0; i < navLinks.length; i++) {
-//     navLinks[i].onclick = function() {
-//         let j = 0;
-//         while (j < navLinks.length) {
-//             navLinks[j++].className = 'list';
-//         }
-//         navLinks[i].className = 'list active';
-//     } 
-// }
 
 function makeActive(tabs) {
     for (let i = 0; i < tabs.length; i++) {
@@ -74,11 +61,9 @@ function makeActive(tabs) {
             // Remove active tabs
             for (let j = 0; j < tabs.length; j++) {
                 tabs[j].classList.remove('active');
-                // tabContent[j].classList.remove('active');
             }
     
             tabs[i].classList.add('active');
-            // tabContent[i].classList.add('active');
         })
     }
 }
@@ -98,17 +83,4 @@ likes.forEach(like => like.addEventListener('click', () => {
     }
 }))
 
-// function imgChanger(imagesList, source1, source2) {
-//     imagesList.forEach(img => img.addEventListener('click', () => {
-//         if (img.src.match(source1)) {
-//             img.src = `${source2}`;
-//         } else {
-//             img.src = `${source1}`;
-//         }
-//     }))
-// }
-// imgChanger()
-
-// imgChanger(like);
-// src.replace('bw_','clr_')
 
