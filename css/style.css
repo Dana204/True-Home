@@ -2,7 +2,7 @@
  * @author Dana Campbell
  * @email danacam28@gmail.com
  * @create date 2022-01-18 08:30:40
- * @modify date 2022-03-19 11:52:20
+ * @modify date 2022-03-19 11:57:39
  * @desc [A simple single page website built for a real estate agency.]
  */
 
@@ -503,6 +503,7 @@ nav a.active {
 	outline: none;
 	height: 2.8rem;
 	font-size: 0.9375rem;
+	color: var(--black);
 	background-color: transparent;
 	border-radius: 5px;
 }
@@ -514,7 +515,6 @@ nav a.active {
 	-moz-appearance:none; /* Firefox */
     -webkit-appearance:none; /* Safari and Chrome */
     appearance:none;
-	color: var(--black);
 	padding-left: 0.5em;
 	padding-right: 0.5em;
 	cursor: pointer;
