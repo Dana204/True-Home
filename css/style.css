@@ -2,7 +2,7 @@
  * @author Dana Campbell
  * @email danacam28@gmail.com
  * @create date 2022-01-18 08:30:40
- * @modify date 2022-03-19 11:57:39
+ * @modify date 2022-03-19 14:10:27
  * @desc [A simple single page website built for a real estate agency.]
  */
 
@@ -1344,6 +1344,7 @@ footer span {
 	nav {
 		position: fixed;
 		top: 0; right: -100%;
+		bottom: 0;
 		flex-direction: column;
 		background: var(--white);
 		z-index: 23;
